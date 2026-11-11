@@ -1,0 +1,26 @@
+{
+  "name": "smartcivic",
+  "version": "2.0.0",
+  "description": "SmartCivic AI - Intelligent Municipal Grievance and Waste Management System",
+  "main": "server/server.js",
+  "scripts": {
+    "start:ml": "python -m uvicorn app:app --app-dir ml_service --port 8000",
+    "start:server": "node server/server.js",
+    "start:client": "npm --prefix client run dev",
+    "start:streamlit": "streamlit run streamlit_app.py --server.port 8501",
+    "seed": "node server/seed.js",
+    "dev": "npx concurrently -k -n \"ML,BACKEND,FRONTEND\" -c \"magenta,blue,green\" \"npm run start:ml\" \"npm run start:server\" \"npm run start:client\""
+  },
+  "keywords": [
+    "smart-city",
+    "civic-grievance",
+    "ai",
+    "fastapi",
+    "express",
+    "react",
+    "mongodb"
+  ],
+  "author": "SmartCivic Team",
+  "license": "MIT"
+}
+

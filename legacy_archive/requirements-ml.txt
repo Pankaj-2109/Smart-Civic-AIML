@@ -1,0 +1,7 @@
+# Runtime ML dependencies (kept separate from the pip-audited requirements.txt).
+# Needed on the server for ml/yolo_runner.py and ml/muril_shadow.py.
+# Install: pip install -r requirements-ml.txt
+numpy>=1.26
+onnxruntime>=1.18
+opencv-python-headless>=4.9
+tokenizers>=0.19
